@@ -1,6 +1,9 @@
+# Important
+This is just me testing and learning AI coding tools, and working with github. Though it might be a useful app to some, it is not a meant as production ready application. Just a learning project. There are plenty of markdown viewers and editors to choose from.
+
 # Markdown Viewer MVP
 
-A lightweight, cross-platform markdown viewer built with Tauri and TypeScript.
+A lightweight, cross-platform markdown viewer for the Desktop, built with Tauri and TypeScript.
 
 ## ✅ MVP Features Completed
 
