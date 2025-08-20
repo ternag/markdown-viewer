@@ -6,7 +6,7 @@
   "scripts": {
     "dev:frontend": "npm run build:frontend",
     "build": "npm run build:frontend",
-    "build:frontend": "cp src/*.html dist/ && cp src/*.css dist/ && cp src/*.js dist/",
+    "build:frontend": "npx tsc && node build-frontend.js",
     "dev": "cargo tauri dev",
     "build:app": "cargo tauri build",
     "build:release": "npm run build && cargo tauri build",
@@ -17,7 +17,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:frontend": "jest",
-    "test:backend": "cd src-tauri && cargo test",
+    "test:backend": "cd src-tauri && cargo test --lib",
     "test:all": "npm run test:frontend && npm run test:backend",
     "test:build": "npm run build && echo 'Frontend build successful'"
   },

@@ -23,3 +23,6 @@ src-tauri/gen/
 
 # Test files (keep test.md for demo)
 # test.md
+
+# Coverage reports
+coverage/

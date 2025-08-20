@@ -26,13 +26,34 @@
   },
   "bundle": {
     "active": true,
-    "targets": "all",
+    "targets": ["msi", "deb", "rpm", "dmg", "appimage"],
+    "publisher": "Markdown Viewer Team",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "resources": [],
+    "externalBin": [],
+    "copyright": "Copyright © 2024 Markdown Viewer Team",
+    "category": "Productivity",
+    "shortDescription": "A lightweight, cross-platform markdown viewer",
+    "longDescription": "A fast and lightweight markdown viewer for reading documentation and notes across Windows, macOS, and Linux.",
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    },
+    "macOS": {
+      "frameworks": [],
+      "minimumSystemVersion": "10.13"
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    }
   }
 }

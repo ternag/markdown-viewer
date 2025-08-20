@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1755718527567" clover="3.2.0">
-  <project timestamp="1755718527567" name="All files">
+<coverage generated="1755721095670" clover="3.2.0">
+  <project timestamp="1755721095670" name="All files">
     <metrics statements="178" coveredstatements="78" conditionals="33" coveredconditionals="13" methods="38" coveredmethods="20" elements="249" coveredelements="111" complexity="0" loc="178" ncloc="178" packages="1" files="4" classes="4"/>
     <file name="file-manager.ts" path="/Users/terje/repos/markdown-viewer/src/file-manager.ts">
       <metrics statements="25" coveredstatements="25" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
