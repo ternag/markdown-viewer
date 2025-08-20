@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+    <!-- Load dependencies via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <!-- Tauri API detection -->
+    <script>
+        // Simple Tauri API detection
+        console.log('Checking for Tauri API...');
+        console.log('window.__TAURI__:', typeof window.__TAURI__);
+        console.log('window.__TAURI_INVOKE__:', typeof window.__TAURI_INVOKE__);
+        console.log('window.invoke:', typeof window.invoke);
+        
+        // Wait for Tauri to be available
+        let checkCount = 0;
+        const checkTauri = () => {
+            checkCount++;
+            if (window.__TAURI__ || window.__TAURI_INVOKE__ || typeof window.invoke === 'function') {
+                console.log('Tauri API detected after', checkCount, 'checks');
+                return;
+            }
+            if (checkCount < 50) {
+                setTimeout(checkTauri, 100);
+            } else {
+                console.log('Tauri API not available after 5 seconds');
+            }
+        };
+        checkTauri();
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div id="content-container">
+            <div id="markdown-content">
+                <div class="welcome-message">
+                    <h1>Welcome to Markdown Viewer</h1>
+                    <p>Use File > Open File... to view a markdown document</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
