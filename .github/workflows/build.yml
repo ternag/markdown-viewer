@@ -35,10 +35,14 @@ jobs:
         path: |
           ~/.cargo/registry
           ~/.cargo/git
+          ~/.cargo/bin
           src-tauri/target
-        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}-tauri-cli-2
         restore-keys: |
           ${{ runner.os }}-cargo-
+      
+    - name: Install Tauri CLI
+      run: cargo install tauri-cli@^2.0.0
     
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
@@ -91,10 +95,14 @@ jobs:
         path: |
           ~/.cargo/registry
           ~/.cargo/git
+          ~/.cargo/bin
           src-tauri/target
-        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}-tauri-cli-2
         restore-keys: |
           ${{ runner.os }}-cargo-
+      
+    - name: Install Tauri CLI
+      run: cargo install tauri-cli@^2.0.0
     
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
