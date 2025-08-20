@@ -152,7 +152,7 @@ src/                # Frontend (TypeScript)
 
 ### Development Phases
 
-#### Phase 1: Project Setup (1-2 days)
+#### Phase 1: Project Setup
 - Initialize Tauri project with TypeScript
 - Set up build pipeline and development environment
 - Create basic window structure and file organization
@@ -160,7 +160,7 @@ src/                # Frontend (TypeScript)
 
 **Milestone 1:** "Hello World" - Tauri app opens with basic window
 
-#### Phase 2: Core Functionality (3-4 days)
+#### Phase 2: Core Functionality
 - Implement file opening (dialog + CLI arguments)
 - Set up markdown-it parsing pipeline
 - Basic HTML rendering and content display
@@ -168,16 +168,13 @@ src/                # Frontend (TypeScript)
 
 **Milestone 2:** "File Operations" - Can open and display markdown files
 
-#### Phase 3: Polish & Distribution (2-3 days)
+#### Phase 3: Polish & Distribution
 - Implement single instance per file logic
 - Add syntax highlighting with Prism.js
 - Basic styling, layout, and user experience polish
 - Cross-platform build scripts and packaging
 
 **Milestone 3:** "Production Ready" - Fully functional MVP ready for distribution
-
-### Estimated Timeline
-**Total: 6-9 days** for a working MVP that covers the essential use case of viewing markdown files.
 
 ### Success Criteria
 - Opens markdown files from file dialog or command line
@@ -186,7 +183,7 @@ src/                # Frontend (TypeScript)
 - Runs on Windows, macOS, and Linux
 - Lightweight and responsive performance
 
-### Post-MVP Features (Phase 2)
+### Post-MVP Features (Stage 2)
 - File watching with automatic updates
 - Search functionality with highlighting
 - Incremental document updates

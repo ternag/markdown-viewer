@@ -13,12 +13,22 @@
     "build:debug": "npm run build && cargo tauri build --debug",
     "type-check": "npx tsc --noEmit",
     "clean": "rm -rf dist/* src-tauri/target",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:frontend": "jest",
+    "test:backend": "cd src-tauri && cargo test",
+    "test:all": "npm run test:frontend && npm run test:backend",
     "test:build": "npm run build && echo 'Frontend build successful'"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^20.0.0",
     "@types/prismjs": "^1.26.5",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "ts-jest": "^29.1.0",
     "serve": "^14.0.0",
     "typescript": "^5.0.0"
   },
