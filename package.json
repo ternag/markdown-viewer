@@ -6,7 +6,7 @@
   "scripts": {
     "dev:frontend": "npm run build:frontend",
     "build": "npm run build:frontend",
-    "build:frontend": "cp src/*.html dist/ && cp src/*.css dist/ && cp src/*.js dist/",
+    "build:frontend": "npx tsc && node build-frontend.js",
     "dev": "cargo tauri dev",
     "build:app": "cargo tauri build",
     "build:release": "npm run build && cargo tauri build",
