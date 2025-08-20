@@ -42,7 +42,7 @@ jobs:
           ${{ runner.os }}-cargo-
       
     - name: Install Tauri CLI
-      run: cargo install tauri-cli@^2.0.0
+      run: cargo install tauri-cli@^2.0.0 --force
     
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
@@ -102,7 +102,7 @@ jobs:
           ${{ runner.os }}-cargo-
       
     - name: Install Tauri CLI
-      run: cargo install tauri-cli@^2.0.0
+      run: cargo install tauri-cli@^2.0.0 --force
     
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
