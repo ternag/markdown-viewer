@@ -42,7 +42,13 @@ jobs:
           ${{ runner.os }}-cargo-
       
     - name: Install Tauri CLI
-      run: cargo install tauri-cli@^2.0.0 --force
+      run: |
+        if ! cargo tauri --version >/dev/null 2>&1; then
+          echo "Installing Tauri CLI..."
+          cargo install tauri-cli@^2.0.0
+        else
+          echo "Tauri CLI already installed: $(cargo tauri --version)"
+        fi
     
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
@@ -102,7 +108,13 @@ jobs:
           ${{ runner.os }}-cargo-
       
     - name: Install Tauri CLI
-      run: cargo install tauri-cli@^2.0.0 --force
+      run: |
+        if ! cargo tauri --version >/dev/null 2>&1; then
+          echo "Installing Tauri CLI..."
+          cargo install tauri-cli@^2.0.0
+        else
+          echo "Tauri CLI already installed: $(cargo tauri --version)"
+        fi
     
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
