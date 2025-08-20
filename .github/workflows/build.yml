@@ -55,11 +55,11 @@ jobs:
     - name: Run frontend tests
       run: npm run test:frontend
       
-    - name: Run Rust tests
-      run: npm run test:backend
-      
     - name: Build frontend
       run: npm run build
+      
+    - name: Run Rust tests
+      run: cd src-tauri && cargo test --lib
       
     - name: Build Tauri app (debug)
       run: npm run build:debug
